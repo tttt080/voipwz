@@ -70,7 +70,7 @@ void VoipConfig::Initialize() {
 		xml.FindElem("/easydialrecord/config/lchanaudiogain");
 		CStdString lag = xml.GetData();
 		m_audioGainChannel1Db = StringToInt(lag);
-		//
+		//d
 		LOG4CXX_INFO(LOG.rootLog, "lchanaudiogain=" + lag);
 
 		xml.FindElem("/easydialrecord/config/rchanaudiogain");
