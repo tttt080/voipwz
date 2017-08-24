@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8769498B-306B-40CC-B0D2-0362238BD312}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>voipwz</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;BUILD_ORKBASE;inline=__inline;WIN32_LEAN_AND_MEAN;_XKEYCHECK_H;_CRT_SECURE_NO_WARNINGS;ACE_HAS_POSIX_TIME;ACE_LACKS_TIMESPEC_T;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_AFXDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../../DevExt/speex/speex-1.2beta3-win32/include;./../;./;../../DevExt/xerces++/xerces-c_2_6_0-windows_nt-msvc_60/include;../../DevExt/winpcap/WpdPack/Include;../../DevExt/ACE_wrappers;../../DevExt/log4cxx/u;../../DevExt/boost/boost_1_39_0;../../DevExt/libsndfile/include</AdditionalIncludeDirectories>
+      <AdditionalOptions>/wd4430 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ACEd.lib;libsndfile-1.lib;libspeex.lib;log4cxx.lib;xerces-c_2D.lib;Packet.lib;wpcap.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>./dlib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AudioCapture.cpp" />
+    <ClCompile Include="audiofile\AudioFile.cpp" />
+    <ClCompile Include="audiofile\LibSndFileFile.cpp" />
+    <ClCompile Include="audiofile\MediaChunkFile.cpp" />
+    <ClCompile Include="audiofile\PcmFile.cpp" />
+    <ClCompile Include="AudioTape.cpp" />
+    <ClCompile Include="BatchProcessing.cpp" />
+    <ClCompile Include="CapturePluginProxy.cpp" />
+    <ClCompile Include="CapturePort.cpp" />
+    <ClCompile Include="CommandProcessing.cpp" />
+    <ClCompile Include="Config.cpp" />
+    <ClCompile Include="ConfigManager.cpp" />
+    <ClCompile Include="Daemon.cpp" />
+    <ClCompile Include="DirectionSelector.cpp" />
+    <ClCompile Include="EventStreaming.cpp" />
+    <ClCompile Include="Filter.cpp" />
+    <ClCompile Include="filters\audiogain\AudioGain.cpp" />
+    <ClCompile Include="filters\g722codec\G722Codec.cpp" />
+    <ClCompile Include="filters\g726codecs\G721Codec.cpp" />
+    <ClCompile Include="filters\g726codecs\g72x\g721.c" />
+    <ClCompile Include="filters\g726codecs\g72x\g723_24.c" />
+    <ClCompile Include="filters\g726codecs\g72x\g723_40.c" />
+    <ClCompile Include="filters\g726codecs\g72x\g72x.c" />
+    <ClCompile Include="filters\gsm\gsm610\add.c" />
+    <ClCompile Include="filters\gsm\gsm610\code.c" />
+    <ClCompile Include="filters\gsm\gsm610\decode.c" />
+    <ClCompile Include="filters\gsm\gsm610\gsm_create.c" />
+    <ClCompile Include="filters\gsm\gsm610\gsm_decode.c" />
+    <ClCompile Include="filters\gsm\gsm610\gsm_destroy.c" />
+    <ClCompile Include="filters\gsm\gsm610\gsm_encode.c" />
+    <ClCompile Include="filters\gsm\gsm610\gsm_option.c" />
+    <ClCompile Include="filters\gsm\gsm610\long_term.c" />
+    <ClCompile Include="filters\gsm\gsm610\lpc.c" />
+    <ClCompile Include="filters\gsm\gsm610\preprocess.c" />
+    <ClCompile Include="filters\gsm\gsm610\rpe.c" />
+    <ClCompile Include="filters\gsm\gsm610\short_term.c" />
+    <ClCompile Include="filters\gsm\gsm610\table.c" />
+    <ClCompile Include="filters\gsm\GsmFilters.cpp" />
+    <ClCompile Include="filters\ilbc\IlbcFilters.cpp" />
+    <ClCompile Include="filters\ilbc\ilbc\anaFilter.c" />
+    <ClCompile Include="filters\ilbc\ilbc\constants.c" />
+    <ClCompile Include="filters\ilbc\ilbc\createCB.c" />
+    <ClCompile Include="filters\ilbc\ilbc\doCPLC.c" />
+    <ClCompile Include="filters\ilbc\ilbc\enhancer.c" />
+    <ClCompile Include="filters\ilbc\ilbc\FrameClassify.c" />
+    <ClCompile Include="filters\ilbc\ilbc\gainquant.c" />
+    <ClCompile Include="filters\ilbc\ilbc\getCBvec.c" />
+    <ClCompile Include="filters\ilbc\ilbc\helpfun.c" />
+    <ClCompile Include="filters\ilbc\ilbc\hpInput.c" />
+    <ClCompile Include="filters\ilbc\ilbc\hpOutput.c" />
+    <ClCompile Include="filters\ilbc\ilbc\iCBConstruct.c" />
+    <ClCompile Include="filters\ilbc\ilbc\iCBSearch.c" />
+    <ClCompile Include="filters\ilbc\ilbc\iLBC_decode.c" />
+    <ClCompile Include="filters\ilbc\ilbc\iLBC_encode.c" />
+    <ClCompile Include="filters\ilbc\ilbc\iLBC_filter.c" />
+    <ClCompile Include="filters\ilbc\ilbc\LPCdecode.c" />
+    <ClCompile Include="filters\ilbc\ilbc\LPCencode.c" />
+    <ClCompile Include="filters\ilbc\ilbc\lsf.c" />
+    <ClCompile Include="filters\ilbc\ilbc\packing.c" />
+    <ClCompile Include="filters\ilbc\ilbc\StateConstructW.c" />
+    <ClCompile Include="filters\ilbc\ilbc\StateSearchW.c" />
+    <ClCompile Include="filters\ilbc\ilbc\syntFilter.c" />
+    <ClCompile Include="filters\speex\SpeexCodec.cpp" />
+    <ClCompile Include="g711.c" />
+    <ClCompile Include="ImmediateProcessing.cpp" />
+    <ClCompile Include="LogManager.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="markUp\Markup.cpp" />
+    <ClCompile Include="MemUtils.cpp" />
+    <ClCompile Include="messages\AddTagMsg.cpp" />
+    <ClCompile Include="messages\AsyncMessage.cpp" />
+    <ClCompile Include="messages\CaptureMsg.cpp" />
+    <ClCompile Include="messages\CrashMessage.cpp" />
+    <ClCompile Include="messages\DeleteTapeMsg.cpp" />
+    <ClCompile Include="messages\InitMsg.cpp" />
+    <ClCompile Include="messages\Message.cpp" />
+    <ClCompile Include="messages\PingMsg.cpp" />
+    <ClCompile Include="messages\ReadLoggingPropertiesMsg.cpp" />
+    <ClCompile Include="messages\RecordMsg.cpp" />
+    <ClCompile Include="messages\SyncMessage.cpp" />
+    <ClCompile Include="messages\TapeMsg.cpp" />
+    <ClCompile Include="messages\TestMsg.cpp" />
+    <ClCompile Include="MultiThreadedServer.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="ObjectFactory.cpp" />
+    <ClCompile Include="OrkBase.cpp" />
+    <ClCompile Include="OrkClient.cpp" />
+    <ClCompile Include="OrkTrack.cpp" />
+    <ClCompile Include="PartyFilter.cpp" />
+    <ClCompile Include="Reporting.cpp" />
+    <ClCompile Include="serializers\DomSerializer.cpp" />
+    <ClCompile Include="serializers\Serializer.cpp" />
+    <ClCompile Include="serializers\SingleLineSerializer.cpp" />
+    <ClCompile Include="serializers\UrlSerializer.cpp" />
+    <ClCompile Include="serializers\XmlRpcSerializer.cpp" />
+    <ClCompile Include="SizedBuffer.cpp" />
+    <ClCompile Include="SocketStreamer.cpp" />
+    <ClCompile Include="TapeFileNaming.cpp" />
+    <ClCompile Include="TapeProcessor.cpp" />
+    <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="VoipConfig.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AudioCapture.h" />
+    <ClInclude Include="AudioCapturePlugin.h" />
+    <ClInclude Include="audiofile\AudioFile.h" />
+    <ClInclude Include="audiofile\LibSndFileFile.h" />
+    <ClInclude Include="audiofile\MediaChunkFile.h" />
+    <ClInclude Include="audiofile\PcmFile.h" />
+    <ClInclude Include="AudioTape.h" />
+    <ClInclude Include="BatchProcessing.h" />
+    <ClInclude Include="CapturePluginProxy.h" />
+    <ClInclude Include="CapturePort.h" />
+    <ClInclude Include="CommandProcessing.h" />
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="ConfigManager.h" />
+    <ClInclude Include="Daemon.h" />
+    <ClInclude Include="DirectionSelector.h" />
+    <ClInclude Include="dll.h" />
+    <ClInclude Include="EventStreaming.h" />
+    <ClInclude Include="Filter.h" />
+    <ClInclude Include="filters\audiogain\AudioGain.h" />
+    <ClInclude Include="filters\g722codec\G722.h" />
+    <ClInclude Include="filters\g722codec\G722Codec.h" />
+    <ClInclude Include="filters\g726codecs\G721Codec.h" />
+    <ClInclude Include="filters\g726codecs\g72x\g72x.h" />
+    <ClInclude Include="filters\gsm\gsm610\config.h" />
+    <ClInclude Include="filters\gsm\gsm610\gsm.h" />
+    <ClInclude Include="filters\gsm\gsm610\gsm610_priv.h" />
+    <ClInclude Include="filters\gsm\GsmFilters.h" />
+    <ClInclude Include="filters\ilbc\IlbcFilters.h" />
+    <ClInclude Include="filters\ilbc\ilbc\anaFilter.h" />
+    <ClInclude Include="filters\ilbc\ilbc\constants.h" />
+    <ClInclude Include="filters\ilbc\ilbc\createCB.h" />
+    <ClInclude Include="filters\ilbc\ilbc\doCPLC.h" />
+    <ClInclude Include="filters\ilbc\ilbc\enhancer.h" />
+    <ClInclude Include="filters\ilbc\ilbc\filter.h" />
+    <ClInclude Include="filters\ilbc\ilbc\FrameClassify.h" />
+    <ClInclude Include="filters\ilbc\ilbc\gainquant.h" />
+    <ClInclude Include="filters\ilbc\ilbc\getCBvec.h" />
+    <ClInclude Include="filters\ilbc\ilbc\helpfun.h" />
+    <ClInclude Include="filters\ilbc\ilbc\hpInput.h" />
+    <ClInclude Include="filters\ilbc\ilbc\hpOutput.h" />
+    <ClInclude Include="filters\ilbc\ilbc\iCBConstruct.h" />
+    <ClInclude Include="filters\ilbc\ilbc\iCBSearch.h" />
+    <ClInclude Include="filters\ilbc\ilbc\iLBC_decode.h" />
+    <ClInclude Include="filters\ilbc\ilbc\iLBC_define.h" />
+    <ClInclude Include="filters\ilbc\ilbc\iLBC_encode.h" />
+    <ClInclude Include="filters\ilbc\ilbc\LPCdecode.h" />
+    <ClInclude Include="filters\ilbc\ilbc\LPCencode.h" />
+    <ClInclude Include="filters\ilbc\ilbc\lsf.h" />
+    <ClInclude Include="filters\ilbc\ilbc\packing.h" />
+    <ClInclude Include="filters\ilbc\ilbc\StateConstructW.h" />
+    <ClInclude Include="filters\ilbc\ilbc\StateSearchW.h" />
+    <ClInclude Include="filters\ilbc\ilbc\syntFilter.h" />
+    <ClInclude Include="filters\speex\SpeexCodec.h" />
+    <ClInclude Include="g711.h" />
+    <ClInclude Include="ImmediateProcessing.h" />
+    <ClInclude Include="LogManager.h" />
+    <ClInclude Include="markUp\Markup.h" />
+    <ClInclude Include="MemUtils.h" />
+    <ClInclude Include="messages\AddTagMsg.h" />
+    <ClInclude Include="messages\AsyncMessage.h" />
+    <ClInclude Include="messages\CaptureMsg.h" />
+    <ClInclude Include="messages\CrashMessage.h" />
+    <ClInclude Include="messages\DeleteTapeMsg.h" />
+    <ClInclude Include="messages\InitMsg.h" />
+    <ClInclude Include="messages\Message.h" />
+    <ClInclude Include="messages\PingMsg.h" />
+    <ClInclude Include="messages\ReadLoggingPropertiesMsg.h" />
+    <ClInclude Include="messages\RecordMsg.h" />
+    <ClInclude Include="messages\SyncMessage.h" />
+    <ClInclude Include="messages\TapeMsg.h" />
+    <ClInclude Include="messages\TestMsg.h" />
+    <ClInclude Include="MultiThreadedServer.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="ObjectFactory.h" />
+    <ClInclude Include="OrkBase.h" />
+    <ClInclude Include="OrkClient.h" />
+    <ClInclude Include="OrkTrack.h" />
+    <ClInclude Include="PartyFilter.h" />
+    <ClInclude Include="Reporting.h" />
+    <ClInclude Include="serializers\DomSerializer.h" />
+    <ClInclude Include="serializers\Serializer.h" />
+    <ClInclude Include="serializers\SingleLineSerializer.h" />
+    <ClInclude Include="serializers\UrlSerializer.h" />
+    <ClInclude Include="serializers\XmlRpcSerializer.h" />
+    <ClInclude Include="shared_ptr.h" />
+    <ClInclude Include="SizedBuffer.h" />
+    <ClInclude Include="SocketStreamer.h" />
+    <ClInclude Include="StdString.h" />
+    <ClInclude Include="TapeFileNaming.h" />
+    <ClInclude Include="TapeProcessor.h" />
+    <ClInclude Include="ThreadSafeQueue.h" />
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="VoipConfig.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
